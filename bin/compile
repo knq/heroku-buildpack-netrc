@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo 'machine '$NETRC_HOST >> $HOME/.netrc
-echo '  login '$NETRC_USERNAME >> $HOME/.netrc
-echo '  password '$NETRC_PASSWORD >> $HOME/.netrc
+echo "machine $NETRC_HOST login $NETRC_USERNAME password $NETRC_PASSWORD" >> $HOME/.netrc
+
+echo "-----> Created $HOME/.netrc entry for ${NETRC_USERNAME}@${NETRC_HOST}"
