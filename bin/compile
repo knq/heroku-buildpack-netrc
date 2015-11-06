@@ -2,4 +2,4 @@
 
 echo "machine $NETRC_HOST login $NETRC_USERNAME password $NETRC_PASSWORD" >> $HOME/.netrc
 
-echo "-----> Created $HOME/.netrc entry for ${NETRC_USERNAME}@${NETRC_HOST}"
+echo "-----> Created entry for ${NETRC_USERNAME}@${NETRC_HOST} in $HOME/.netrc"
