@@ -4,6 +4,9 @@ Write to ~/.netrc
 Simply have a `NETRC_HOST`, `NETRC_USERNAME`, and `NETRC_PASSWORD` as the
 environment variables and they would be written to `~/.netrc`.
 
+```sh
+$ dokku config:set <app> NETRC=$(echo $HOME/.netrc|base64)
+```
 
 Requirements
 ------------
@@ -20,12 +23,11 @@ Usage
 
 Example usage:
 
-    $ heroku create --stack cedar --buildpack http://github.com/fs-webdev/heroku-buildpack-netrc.git
+    $ heroku buildpacks http://github.com/fs-webdev/heroku-buildpack-netrc.git
 
 Enable config vars to be visible during buildpack execution, and set the token.
 
     $ heroku labs:enable user-env-compile
-    $ heroku config:set GITHUB_AUTH_TOKEN=<my-read-only-token>
 
 Deploy your app.
 
